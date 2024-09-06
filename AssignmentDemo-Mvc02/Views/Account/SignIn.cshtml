@@ -1,0 +1,21 @@
+﻿
+@{
+    Layout = "_AuthLayout";
+    ViewBag.Title = "Sign In";
+}
+
+<h1 class="text-center h4 mt-5 ">Sign In With Existing Account</h1>
+
+<form class="mx-auto w-50 ">
+
+    <label for="email" class="form-label">Email</label>
+    <input placeholder="Enter Your Email.." name="email" class="form-control my-2" />
+
+    <label for="password" class="form-label">Password</label>
+    <input placeholder="Enter Your Password.." name="password" type="password" class="form-control my-2" />
+
+    <button id="btnSignin" type="submit" class="btn btn-outline-success mt-4">Sign In</button>
+    <a href="/Account/Signup" class="btn btn-danger mt-4 ms-1">Go Register</a>
+
+</form>
+
