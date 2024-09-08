@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿
+<!DOCTYPE html>
 
 <html>
 <head>
@@ -8,16 +9,28 @@
 
 </head>
 <body>
+
+    @* Html Tag *@
+    @* <a href="/Home/Index" class="btn btn-primary">Home</a> *@
+
+    @* Html Helpers *@
+    @* @Html.ActionLink("Home","Index","Home",null,new{@class = "btn btn-success"}) *@
+
+    @* Tag Helpers *@
+    
+    @* <a asp-controller="Home" asp-action="Index" class="btn btn-primary">Home</a> *@
+
+
     @* Start Header *@
     <div class="text-center mt-5">
-        <a class="btn btn-outline-primary" href="/Home/Index">Home</a>
-        <a class="btn btn-outline-warning" href="/Home/AboutUs">AboutUs</a>
-        <a class="btn btn-outline-success" href="/Home/Privacy">Privacy</a>
-        <a class="btn btn-outline-dark text-black" href="/Home/ContactUs">Contact Us</a>
+        <a asp-controller="Home" asp-action="Home" class="btn btn-outline-primary" >Home</a>
+        <a asp-controller="Home" asp-action="AboutUs" class="btn btn-outline-warning" >AboutUs</a>
+        <a asp-controller="Home" asp-action="Privacy" class="btn btn-outline-success" >Privacy</a>
+        <a asp-controller="Home" asp-action="ContactUs" class="btn btn-outline-dark text-black" >Contact Us</a>
         <br/>
         
-        <a class="btn btn-outline-info my-2" href="/Account/SignIn">SignIn</a>
-        <a class="btn btn-outline-danger" href="/Account/SignUp">SignUp</a>
+        <a asp-controller="Account" asp-action="SignIn" class="btn btn-outline-info my-2" >SignIn</a>
+        <a asp-controller="Account" asp-action="SignUp" class="btn btn-outline-danger" >SignUp</a>
 
     </div>
     @* End Header *@
